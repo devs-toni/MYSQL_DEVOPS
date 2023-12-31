@@ -15,4 +15,4 @@ services:
       - '3306'
     volumes:
       - ./.mysql:/var/lib/mysql
-      - ./dbs.sql:/dbs/
+      - ./:/dbs/
