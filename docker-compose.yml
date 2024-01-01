@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   mysqldb:
-    container_name: mysqldb
+    container_name: servmysqldb
     image: mysql:latest
     restart: always
     environment:
@@ -11,7 +11,9 @@ services:
       MYSQL_ROOT_PASSWORD: 'toni8664'
     ports:
       - '3306:3306'
-    expose:
-      - '3306'
     volumes:
       - ./.mysql:/var/lib/mysql
+
+networks:
+  default:
+    name: mysqldb
