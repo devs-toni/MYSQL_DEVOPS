@@ -6,8 +6,6 @@ services:
     image: mysql:latest
     restart: always
     environment:
-      MYSQL_USER: 'devs'
-      MYSQL_PASSWORD: 'toni8664'
       MYSQL_ROOT_PASSWORD: 'toni8664'
     ports:
       - '3306:3306'
